@@ -18,7 +18,7 @@ The intention with DataScript is to be a basic building block in client-side app
 ## Latest version [![Build Status](https://travis-ci.org/tonsky/datascript.svg?branch=master)](https://travis-ci.org/tonsky/datascript)
 
 ```clj
-[datascript "1.0.3"]
+[datascript "1.0.7"]
 ```
 
 ## Support us
@@ -40,7 +40,7 @@ Docs:
 - API Docs [![cljdoc badge](https://cljdoc.org/badge/datascript/datascript)](https://cljdoc.org/d/datascript/datascript/CURRENT)
 - [Getting started](https://github.com/tonsky/datascript/wiki/Getting-started)
 - [Tutorials](https://github.com/kristianmandrup/datascript-tutorial)
-- [DataScript 101](http://udayv.com/clojurescript/clojure/2016/04/28/datascript101/)
+- [DataScript 101](https://udayv.com/blog/2016-04-28-datascript101/)
 - [Tips & tricks](https://github.com/tonsky/datascript/wiki/Tips-&-tricks)
 
 Posts:
@@ -70,6 +70,7 @@ Projects using DataScript:
 - [Showkr](http://showkr.solovyov.net), flickr gallery viewer ([sources](https://github.com/piranha/showkr))
 - [Zetawar](http://www.zetawar.com), turn-based tactical strategy game
 - [Lemmings](https://www.lemmings.io), incubator focused on art & artificial intelligence
+- [LogSeq](http://logseq.com), a local-first, non-linear, outliner notebook
 
 Related projects:
 
@@ -161,7 +162,7 @@ For more examples, see [our acceptance test suite](test/datascript/test/).
 DataScript can be used from any JS engine without additional dependencies:
 
 ```html
-<script src="https://github.com/tonsky/datascript/releases/download/1.0.3/datascript-1.0.3.min.js"></script>
+<script src="https://github.com/tonsky/datascript/releases/download/1.0.7/datascript-1.0.7.min.js"></script>
 ```
 
 or as a CommonJS module ([npm page](https://www.npmjs.org/package/datascript)):
@@ -270,6 +271,6 @@ Some of the features are omitted intentionally. Different apps have different ne
 
 ## License
 
-Copyright © 2014–2020 Nikita Prokopov
+Copyright © 2014–2021 Nikita Prokopov
 
 Licensed under Eclipse Public License (see [LICENSE](LICENSE)).

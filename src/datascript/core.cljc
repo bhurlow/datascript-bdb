@@ -190,6 +190,11 @@
              Used internally in db (de)serialization. See also [[datom]]."}
   init-db db/init-db)
 
+; Schema
+
+(def ^{:arglists '([db])
+       :doc "Returns a schema of a database."}
+  schema db/-schema)
 
 ; Filtered db
 
@@ -489,7 +494,7 @@
       (transact! conn [[:db/add -1 :friend 296]])
   
       ; create an entity and set multiple attributes (in a single transaction
-      ; equal tempids will be replaced with the same unused yet entid)
+      ; equal tempids will be replaced with the same yet unused entid)
       (transact! conn [[:db/add -1 :name \"Ivan\"]
                        [:db/add -1 :likes \"fries\"]
                        [:db/add -1 :likes \"pizza\"]
@@ -508,11 +513,11 @@
                         :name   \"Oleg\"
                         :likes  [\"fish\"]}])
 
-      ; ref attributes can be specified as nested map, that will create netsed entity as well
+      ; ref attributes can be specified as nested map, that will create nested entity as well
       (transact! conn [{:db/id  -1
                         :name   \"Oleg\"
                         :friend {:db/id -2
-                                 :name \"Sergey\"}])
+                                 :name \"Sergey\"}}])
                                  
       ; reverse attribute name can be used if you want created entity to become
       ; a value in another entity reference
@@ -524,7 +529,7 @@
                        {:db/id 296, :friend -1}])
       ; equivalent to
       (transact! conn [[:db/add  -1 :name   \"Oleg\"]
-                       {:db/add 296 :friend -1]])"
+                       [:db/add 296 :friend -1]])"
   ([conn tx-data] (transact! conn tx-data nil))
   ([conn tx-data tx-meta]
     {:pre [(conn? conn)]}

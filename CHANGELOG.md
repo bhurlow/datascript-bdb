@@ -1,3 +1,15 @@
+# 1.0.7
+
+- Ensure transitive property for hash value comparisons #274 #356 #386 #388 thx @filipesilva
+
+# 1.0.5
+
+- Fixed empty non-queried relation not affecting results #385
+
+# 1.0.4
+
+- Implement nav/datafy for entities #325 thx @IamDrowsy
+
 # 1.0.3
 
 - Temporary disable transient indices #373
